@@ -133,5 +133,18 @@
             $this->assertEquals(19, $result);
         }
 
+        function test_five_letters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'lpwdg';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(12, $result);
+        }
+
     }
 ?>
