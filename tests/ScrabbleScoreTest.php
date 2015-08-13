@@ -381,7 +381,7 @@
         {
             //Arrange
             $test_ScrabbleScore = new ScrabbleScore;
-            $input = '*a*';
+            $input = '*a';
 
             //Act
             $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
@@ -389,6 +389,5 @@
             //Assert
             $this->assertEquals(2, $result);
         }
-
     }
 ?>

@@ -15,10 +15,38 @@ class ScrabbleScore
         $total = 0;
 
         if (!ctype_alnum($word)) {
-            return 'Please enter only letters';
+            $special_character_flag = 1;
         } else {
+            $special_character_flag = 0;
             $word = strtolower($word);
             $split_word = str_split($word);
+        }
+
+        if ($special_character_flag = 1 && in_array('*', $split_word)) {
+
+            $index = array_search('*', $split_word);
+            if ($index != FALSE) {
+                unset($split_word[$index]);
+                $index++;
+                if (in_array($split_word[$index], $one_point_array)) {
+                    $total = $total + 2;
+                } elseif (in_array($split_word[$index], $two_point_array)) {
+                    $total = $total + 4;
+                } elseif (in_array($split_word[$index], $three_point_array)) {
+                    $total = $total + 6;
+                } elseif (in_array($split_word[$index], $four_point_array)) {
+                    $total = $total + 8;
+                } elseif (in_array($split_word[$index], $five_point_array)) {
+                    $total = $total + 10;
+                } elseif (in_array($split_word[$index], $eight_point_array)) {
+                    $total = $total + 16;
+                } elseif (in_array($split_word[$index], $ten_point_array)) {
+                    $total = $total + 20;
+                }
+                unset($split_word[$index]);
+                //multiply letter
+            }
+        } elseif ($special_character_flag = 0) {
             foreach ($split_word as $letter) {
                 if (in_array($letter, $one_point_array)) {
                     $total++;
@@ -36,8 +64,10 @@ class ScrabbleScore
                     $total = $total + 10;
                 }
             }
-            return $total;
+        } else {
+            // return 'Please enter only letters';
         }
+        return $total;
     }
 
     function scrabbleRanking($total)
