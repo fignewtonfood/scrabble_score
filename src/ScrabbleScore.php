@@ -11,6 +11,7 @@ class ScrabbleScore
         $eight_point_array = array('j', 'k');
         $ten_point_array = array('q', 'z');
 
+        $output = array();
         $total = 0;
         $split_word = str_split($word);
 
@@ -31,7 +32,27 @@ class ScrabbleScore
                 $total = $total + 10;
             }
         }
+        // array_push($output, $total);
+        //
+        // if ($total <= 5) {
+        //     array_push($output, 'Toddler');
+        // } elseif ($total <= 10) {
+        //     array_push($output, 'Student');
+        // } elseif ($total <= 15) {
+        //     array_push($output, 'Average Player');
+        // } elseif ($total <= 20) {
+        //     array_push($output, 'Apprentice');
+        // } elseif ($total <= 30) {
+        //     array_push($output, 'Smarty');
+        // } elseif ($total <= 40) {
+        //     array_push($output, 'Padawan');
+        // } elseif ($total <= 50) {
+        //     array_push($output, 'Jedi');
+        // } else {
+        //     array_push($output, 'Grand Master');
+        // }
+
         return $total;
     }
 }
- ?>
+?>
