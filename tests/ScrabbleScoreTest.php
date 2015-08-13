@@ -355,5 +355,26 @@
             //Assert
             $this->assertEquals(36, $result);
         }
+
+//Return 'student' when 'aaa' and 'double score' is input
+//Bug returns 'toddler' instead
+        function test_multiple_methods_bug()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input1 = 'aaa';
+            $input2 = 1;
+
+            //Act
+            //Assert
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input1);
+            $this->assertEquals(3, $result);
+
+            $result_multiplier = $test_ScrabbleScore->scrabbleMultiplier($result, $input2);
+            $this->assertEquals(6, $result_multiplier);
+
+            $result_ranking = $test_ScrabbleScore->scrabbleRanking($result_multiplier);
+            $this->assertEquals('Student', $result_ranking);
+        }
     }
 ?>

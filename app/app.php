@@ -13,8 +13,9 @@
     $app->get('/results', function() use ($app){
         $new = new ScrabbleScore;
         $output = $new->scrabbleScoreCalculator($_GET['word']);
-        $output2 = $new->scrabbleRanking($output);
-        return $app['twig']->render('scrabble_results.html.twig', array('score' => $output, 'rank' => $output2));
+        $output3 = $new->scrabbleMultiplier($output, $_GET['mult']);
+        $output2 = $new->scrabbleRanking($output3);
+        return $app['twig']->render('scrabble_results.html.twig', array('score' => $output3, 'rank' => $output2));
     });
     return $app;
 ?>

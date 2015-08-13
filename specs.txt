@@ -93,7 +93,7 @@ Input: ASD
 Output: 4
 
 24) Exclude non alpha characters
-Input: ~_:
+Input: '~_:'
 Output: 'Please enter only letters'
 
 25) Return rank for score zero
@@ -105,7 +105,12 @@ Input1: 12
 Input2: 1
 Output: 24
 
-26) Return value for triple word score
+27) Return value for triple word score
 Input1: 12
 Input2: 2
 Output: 36
+
+28) Return 'student' when 'aaa' and 'double score' is input
+Input1: 'aaa'
+Input2: 1
+Output: 'Student'
