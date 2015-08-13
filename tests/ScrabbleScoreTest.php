@@ -68,5 +68,18 @@
             $this->assertEquals(5, $result);
         }
 
+        function test_single_letter_value_eight()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'j';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(8, $result);
+        }
+
     }
 ?>
