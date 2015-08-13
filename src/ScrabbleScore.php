@@ -14,28 +14,30 @@ class ScrabbleScore
         $output = array();
         $total = 0;
 
-        $word = strtolower($word);
-
-        $split_word = str_split($word);
-
-        foreach ($split_word as $letter) {
-            if (in_array($letter, $one_point_array)) {
-                $total++;
-            } elseif (in_array($letter, $two_point_array)) {
-                $total = $total + 2;
-            } elseif (in_array($letter, $three_point_array)) {
-                $total = $total + 3;
-            } elseif (in_array($letter, $four_point_array)) {
-                $total = $total + 4;
-            } elseif (in_array($letter, $five_point_array)) {
-                $total = $total + 5;
-            } elseif (in_array($letter, $eight_point_array)) {
-                $total = $total + 8;
-            } elseif (in_array($letter, $ten_point_array)) {
-                $total = $total + 10;
+        if (!ctype_alnum($word)) {
+            return 'Please enter only letters';
+        } else {
+            $word = strtolower($word);
+            $split_word = str_split($word);
+            foreach ($split_word as $letter) {
+                if (in_array($letter, $one_point_array)) {
+                    $total++;
+                } elseif (in_array($letter, $two_point_array)) {
+                    $total = $total + 2;
+                } elseif (in_array($letter, $three_point_array)) {
+                    $total = $total + 3;
+                } elseif (in_array($letter, $four_point_array)) {
+                    $total = $total + 4;
+                } elseif (in_array($letter, $five_point_array)) {
+                    $total = $total + 5;
+                } elseif (in_array($letter, $eight_point_array)) {
+                    $total = $total + 8;
+                } elseif (in_array($letter, $ten_point_array)) {
+                    $total = $total + 10;
+                }
             }
+            return $total;
         }
-        return $total;
     }
 
     function scrabbleRanking($total)
