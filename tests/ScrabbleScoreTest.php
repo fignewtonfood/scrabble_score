@@ -198,5 +198,32 @@
             $this->assertEquals('Toddler', $result);
         }
 
+        function test_rank_less_than_ten()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 10;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Student', $result);
+        }
+
+        function test_rank_less_than_five()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 5;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Toddler', $result);
+        }
+
+
     }
 ?>
