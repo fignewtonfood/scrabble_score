@@ -224,6 +224,18 @@
             $this->assertEquals('Average Player', $result);
         }
 
+        function test_rank_less_than_twenty()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 20;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Apprentice', $result);
+        }
 
     }
 ?>
