@@ -55,5 +55,18 @@
             $this->assertEquals(4, $result);
         }
 
+        function test_single_letter_value_five()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'k';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(5, $result);
+        }
+
     }
 ?>
