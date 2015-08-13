@@ -276,5 +276,17 @@
             $this->assertEquals('Jedi', $result);
         }
 
+        function test_rank_more_than_fifty()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 51;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Grand Master', $result);
+        }
     }
 ?>
