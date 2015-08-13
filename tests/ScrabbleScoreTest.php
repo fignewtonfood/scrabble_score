@@ -263,5 +263,18 @@
             $this->assertEquals('Padawan', $result);
         }
 
+        function test_rank_less_than_fifty()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 50;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Jedi', $result);
+        }
+
     }
 ?>
