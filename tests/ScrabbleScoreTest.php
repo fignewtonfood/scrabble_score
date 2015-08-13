@@ -29,5 +29,18 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_single_letter_value_three()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'b';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(3, $result);
+        }
+
     }
 ?>
