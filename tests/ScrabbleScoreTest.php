@@ -211,17 +211,17 @@
             $this->assertEquals('Student', $result);
         }
 
-        function test_rank_less_than_five()
+        function test_rank_less_than_fifteen()
         {
             //Arrange
             $test_ScrabbleScore = new ScrabbleScore;
-            $input = 5;
+            $input = 15;
 
             //Act
             $result = $test_ScrabbleScore->scrabbleRanking($input);
 
             //Assert
-            $this->assertEquals('Toddler', $result);
+            $this->assertEquals('Average Player', $result);
         }
 
 
