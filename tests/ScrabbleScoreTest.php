@@ -250,5 +250,18 @@
             $this->assertEquals('Smarty', $result);
         }
 
+        function test_rank_less_than_forty()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 40;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Padawan', $result);
+        }
+
     }
 ?>
