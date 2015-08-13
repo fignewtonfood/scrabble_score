@@ -341,5 +341,19 @@
             //Assert
             $this->assertEquals(24, $result);
         }
+
+        function test_triple_word_score()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input1 = 12;
+            $input2 = 2;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleMultiplier($input1, $input2);
+
+            //Assert
+            $this->assertEquals(36, $result);
+        }
     }
 ?>
