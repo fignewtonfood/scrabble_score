@@ -32,7 +32,14 @@ class ScrabbleScore
                 $total = $total + 10;
             }
         }
-        // array_push($output, $total);
+
+
+        return $total;
+    }
+
+    function scrabbleRanking($total)
+    {
+        // $rankings = array('Toddler', 'Student', 'Average Player', 'Apprentice', 'Smarty', 'Padawan', 'Jedi', 'Grand Master');
         //
         // if ($total <= 5) {
         //     array_push($output, 'Toddler');
@@ -51,8 +58,6 @@ class ScrabbleScore
         // } else {
         //     array_push($output, 'Grand Master');
         // }
-
-        return $total;
     }
 }
 ?>

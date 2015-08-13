@@ -184,5 +184,19 @@
             //Assert
             $this->assertEquals(40, $result);
         }
+
+        function test_rank_less_than_five()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 5;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Toddler', $result);
+        }
+
     }
 ?>
