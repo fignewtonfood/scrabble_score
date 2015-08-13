@@ -13,8 +13,18 @@ class ScrabbleScore
 
         if (in_array($word, $one_point_array)) {
             return 1;
-        } else {
+        } elseif (in_array($word, $two_point_array)) {
             return 2;
+        } elseif (in_array($word, $three_point_array)) {
+            return 3;
+        } elseif (in_array($word, $four_point_array)) {
+            return 4;
+        } elseif (in_array($word, $five_point_array)) {
+            return 5;
+        } elseif (in_array($word, $eight_point_array)) {
+            return 8;
+        } else {
+            return 10;
         }
     }
 }
