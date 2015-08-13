@@ -237,5 +237,18 @@
             $this->assertEquals('Apprentice', $result);
         }
 
+        function test_rank_less_than_thirty()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 30;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('Smarty', $result);
+        }
+
     }
 ?>
