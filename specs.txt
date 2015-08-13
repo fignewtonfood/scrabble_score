@@ -87,3 +87,7 @@ Output: 'Jedi'
 22) Return rank for score over 50
 Input: 51
 Output: 'Grand Master'
+
+23) Accept caps as input
+Input: ASD
+Output: 4

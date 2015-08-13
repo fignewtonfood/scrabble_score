@@ -288,5 +288,18 @@
             //Assert
             $this->assertEquals('Grand Master', $result);
         }
+
+        function test_caps()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'ASD';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(4, $result);
+        }
     }
 ?>

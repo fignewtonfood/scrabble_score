@@ -13,6 +13,9 @@ class ScrabbleScore
 
         $output = array();
         $total = 0;
+
+        $word = strtolower($word);
+
         $split_word = str_split($word);
 
         foreach ($split_word as $letter) {
@@ -32,8 +35,6 @@ class ScrabbleScore
                 $total = $total + 10;
             }
         }
-
-
         return $total;
     }
 
