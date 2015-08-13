@@ -39,25 +39,25 @@ class ScrabbleScore
 
     function scrabbleRanking($total)
     {
-        // $rankings = array('Toddler', 'Student', 'Average Player', 'Apprentice', 'Smarty', 'Padawan', 'Jedi', 'Grand Master');
-        //
-        // if ($total <= 5) {
-        //     array_push($output, 'Toddler');
-        // } elseif ($total <= 10) {
-        //     array_push($output, 'Student');
-        // } elseif ($total <= 15) {
-        //     array_push($output, 'Average Player');
-        // } elseif ($total <= 20) {
-        //     array_push($output, 'Apprentice');
-        // } elseif ($total <= 30) {
-        //     array_push($output, 'Smarty');
-        // } elseif ($total <= 40) {
-        //     array_push($output, 'Padawan');
-        // } elseif ($total <= 50) {
-        //     array_push($output, 'Jedi');
-        // } else {
-        //     array_push($output, 'Grand Master');
-        // }
+        $rankings = array('Toddler', 'Student', 'Average Player', 'Apprentice', 'Smarty', 'Padawan', 'Jedi', 'Grand Master');
+
+        if ($total <= 5) {
+            return $rankings[0];
+        } elseif ($total <= 10) {
+            return $rankings[1];
+        } elseif ($total <= 15) {
+            return $rankings[2];
+        } elseif ($total <= 20) {
+            return $rankings[3];
+        } elseif ($total <= 30) {
+            return $rankings[4];
+        } elseif ($total <= 40) {
+            return $rankings[5];
+        } elseif ($total <= 50) {
+            return $rankings[6];
+        } else {
+            return $rankings[7];
+        }
     }
 }
 ?>
