@@ -104,8 +104,7 @@
             $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
 
             //Assert
-            $this->assertEquals(6, $result);
+            $this->assertEquals(7, $result);
         }
-
     }
 ?>

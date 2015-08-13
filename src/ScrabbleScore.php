@@ -11,21 +11,27 @@ class ScrabbleScore
         $eight_point_array = array('j', 'k');
         $ten_point_array = array('q', 'z');
 
-        if (in_array($word, $one_point_array)) {
-            return 1;
-        } elseif (in_array($word, $two_point_array)) {
-            return 2;
-        } elseif (in_array($word, $three_point_array)) {
-            return 3;
-        } elseif (in_array($word, $four_point_array)) {
-            return 4;
-        } elseif (in_array($word, $five_point_array)) {
-            return 5;
-        } elseif (in_array($word, $eight_point_array)) {
-            return 8;
-        } else {
-            return 10;
+        $total = 0;
+        $split_word = str_split($word);
+
+        foreach ($split_word as $letter) {
+            if (in_array($letter, $one_point_array)) {
+                $total++;
+            } elseif (in_array($letter, $two_point_array)) {
+                $total = $total + 2;
+            } elseif (in_array($letter, $three_point_array)) {
+                $total = $total + 3;
+            } elseif (in_array($letter, $four_point_array)) {
+                $total = $total + 4;
+            } elseif (in_array($letter, $five_point_array)) {
+                $total = $total + 5;
+            } elseif (in_array($letter, $eight_point_array)) {
+                $total = $total + 8;
+            } elseif (in_array($letter, $ten_point_array)) {
+                $total = $total + 10;
+            }
         }
+        return $total;
     }
 }
  ?>
