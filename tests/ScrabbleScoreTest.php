@@ -81,5 +81,18 @@
             $this->assertEquals(8, $result);
         }
 
+        function test_single_letter_value_ten()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'q';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(10, $result);
+        }
+
     }
 ?>
