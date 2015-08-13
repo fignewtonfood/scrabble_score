@@ -301,5 +301,18 @@
             //Assert
             $this->assertEquals(4, $result);
         }
+
+        function test_exclude_special_characters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = '~_:';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals('Please enter only letters', $result);
+        }
     }
 ?>

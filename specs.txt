@@ -91,3 +91,7 @@ Output: 'Grand Master'
 23) Accept caps as input
 Input: ASD
 Output: 4
+
+24) Exclude non alpha characters
+Input: ~_:
+Output: 'Please enter only letters'
