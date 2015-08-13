@@ -119,5 +119,19 @@
             //Assert
             $this->assertEquals(3, $result);
         }
+
+        function test_four_letters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'pkoz';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(19, $result);
+        }
+
     }
 ?>
