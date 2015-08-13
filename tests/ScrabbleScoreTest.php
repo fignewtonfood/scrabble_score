@@ -159,5 +159,18 @@
             $this->assertEquals(13, $result);
         }
 
+        function test_seven_letters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'fjozlot';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(26, $result);
+        }
+
     }
 ?>
