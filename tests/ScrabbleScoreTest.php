@@ -106,5 +106,18 @@
             //Assert
             $this->assertEquals(7, $result);
         }
+
+        function test_three_letters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'alu';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(3, $result);
+        }
     }
 ?>
