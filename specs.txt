@@ -55,3 +55,35 @@ Output: 26
 14) Return value for fifteen letters
 Input: 'vfrwbilrkgwlfrf'
 Output: 40
+
+15) Return rank for score 5 or below
+Input: 5
+Output: 'Toddler'
+
+16) Return rank for score 10 or below
+Input: 10
+Output: 'Student'
+
+17) Return rank for score 15 or below
+Input: 15
+Output: 'Average Player'
+
+18) Return rank for score 20 or below
+Input: 20
+Output: 'Apprentice'
+
+19) Return rank for score 30 or below
+Input: 30
+Output: 'Smarty'
+
+20) Return rank for score 40 or below
+Input: 40
+Output: 'Padawan'
+
+21) Return rank for score 50 or below
+Input: 50
+Output: 'Jedi'
+
+22) Return rank for score over 50
+Input: 51
+Output: 'Grand Master'
