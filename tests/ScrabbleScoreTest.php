@@ -42,5 +42,18 @@
             $this->assertEquals(3, $result);
         }
 
+        function test_single_letter_value_four()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'f';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(4, $result);
+        }
+
     }
 ?>
