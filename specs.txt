@@ -1,0 +1,57 @@
+Specs in plain English
+
+1) Return value for letter value 1
+Input: 'a'
+Output: 1
+
+2) Return value for letter value 2
+Input: 'd'
+Output: 2
+
+3) Return value for letter value 3
+Input: 'b'
+Output: 3
+
+4) Return value for letter value 4
+Input: 'f'
+Output: 4
+
+5) Return value for letter value 5
+Input: 'k'
+Output: 5
+
+6) Return value for letter value 8
+Input: 'j'
+Output: 8
+
+7) Return value for letter value 10
+Input: 'q'
+Output: 10
+
+8) Return value for two letters
+Input: 'bv'
+Output: 6
+
+9) Return value for three letters
+Input: 'alu'
+Output: 3
+
+10) Return value for four letters
+Input: 'pkoz'
+Output: 19
+
+11) Return value for five letters
+Input: 'lpwdg'
+Output: 12
+
+12) Return value for six letters
+Input: 'charbt'
+Output: 13
+
+13) Return value for seven letters
+Input: 'fjozlot'
+Output: 26
+
+14) Return value for fifteen letters
+Input: 'vfrwbilrkgwlfrf'
+Output: 40
