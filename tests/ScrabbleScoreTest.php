@@ -376,5 +376,19 @@
             $result_ranking = $test_ScrabbleScore->scrabbleRanking($result_multiplier);
             $this->assertEquals('Student', $result_ranking);
         }
+
+        function test_single_letter_double_alone()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = '*a*';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(2, $result);
+        }
+
     }
 ?>

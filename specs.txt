@@ -114,3 +114,11 @@ Output: 36
 Input1: 'aaa'
 Input2: 1
 Output: 'Student'
+
+29) Return value for doubling a single letter alone
+Input: '*a*'
+Output: 2
+
+30) Return value for doubling a single letter in a string
+Input: 'a*b*c'
+Output: 4
