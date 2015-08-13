@@ -328,19 +328,6 @@
             $this->assertEquals('.........', $result);
         }
 
-        function test_exclude_special_characters()
-        {
-            //Arrange
-            $test_ScrabbleScore = new ScrabbleScore;
-            $input = '~_:';
-
-            //Act
-            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
-
-            //Assert
-            $this->assertEquals('Please enter only letters', $result);
-        }
-
         function test_double_word_score()
         {
             //Arrange
@@ -354,6 +341,5 @@
             //Assert
             $this->assertEquals(24, $result);
         }
-
     }
 ?>

@@ -67,7 +67,15 @@ class ScrabbleScore
 
     function scrabbleMultiplier($total, $mult)
     {
-        
+        if ($mult == 1) {
+            $grand_total = $total * 2;
+        } elseif ($mult == 2) {
+            $grand_total = $total * 3;
+        } else {
+            $grand_total = $total;
+        }
+
+        return $grand_total;
     }
 }
 ?>
