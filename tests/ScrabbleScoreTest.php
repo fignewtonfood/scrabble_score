@@ -184,6 +184,5 @@
             //Assert
             $this->assertEquals(40, $result);
         }
-
     }
 ?>
