@@ -99,3 +99,8 @@ Output: 'Please enter only letters'
 25) Return rank for score zero
 Input: 0
 Output: '.........'
+
+26) Return value for double word score
+Input1: 12
+Input2: 1
+Output: 24

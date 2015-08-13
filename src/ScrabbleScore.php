@@ -42,9 +42,11 @@ class ScrabbleScore
 
     function scrabbleRanking($total)
     {
-        $rankings = array('Toddler', 'Student', 'Average Player', 'Apprentice', 'Smarty', 'Padawan', 'Jedi', 'Grand Master');
+        $rankings = array('Toddler', 'Student', 'Average Player', 'Apprentice', 'Smarty', 'Padawan', 'Jedi', 'Grand Master', '.........');
 
-        if ($total <= 5) {
+        if ($total == 0) {
+            return $rankings[8];
+        } elseif ($total <= 5) {
             return $rankings[0];
         } elseif ($total <= 10) {
             return $rankings[1];
@@ -61,6 +63,11 @@ class ScrabbleScore
         } else {
             return $rankings[7];
         }
+    }
+
+    function scrabbleMultiplier($total, $mult)
+    {
+        
     }
 }
 ?>
