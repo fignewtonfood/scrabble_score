@@ -94,5 +94,18 @@
             $this->assertEquals(10, $result);
         }
 
+        function test_two_letters()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 'bv';
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleScoreCalculator($input);
+
+            //Assert
+            $this->assertEquals(6, $result);
+        }
+
     }
 ?>
