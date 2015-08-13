@@ -95,3 +95,7 @@ Output: 4
 24) Exclude non alpha characters
 Input: ~_:
 Output: 'Please enter only letters'
+
+25) Return rank for score zero
+Input: 0
+Output: '.........'

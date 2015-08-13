@@ -314,5 +314,18 @@
             //Assert
             $this->assertEquals('Please enter only letters', $result);
         }
+
+        function test_rank_more_zero()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = 0;
+
+            //Act
+            $result = $test_ScrabbleScore->scrabbleRanking($input);
+
+            //Assert
+            $this->assertEquals('.........', $result);
+        }
     }
 ?>
