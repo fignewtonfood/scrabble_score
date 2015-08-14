@@ -27,7 +27,9 @@ class ScrabbleScore
             $index = array_search('*', $split_word);
             if ($index != FALSE) {
                 unset($split_word[$index]);
+
                 $index++;
+
                 if (in_array($split_word[$index], $one_point_array)) {
                     $total = $total + 2;
                 } elseif (in_array($split_word[$index], $two_point_array)) {
@@ -44,7 +46,6 @@ class ScrabbleScore
                     $total = $total + 20;
                 }
                 unset($split_word[$index]);
-                //multiply letter
             }
         } elseif ($special_character_flag = 0) {
             foreach ($split_word as $letter) {
